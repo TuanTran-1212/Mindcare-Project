@@ -1,0 +1,366 @@
+/* Coach Detail Page Styles */
+
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #4caf50;
+  --yellow: #ffca28;
+  --yellow-dark: #ffb300;
+  --text: #1a1a1a;
+  --gray: #555;
+  --light-gray: #777;
+  --bg: #ffffff;
+  --light: #f8f9fa;
+  --border: #e0e0e0;
+}
+
+.coach-detail {
+  padding: 60px 0;
+}
+
+.coach-profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding-top: 100px;
+  align-items: flex-start;
+}
+
+.main-content-user {
+  width: 70%;
+  flex: 3;
+}
+
+.sidebar-user {
+  width: 30%;
+  background: var(--bg);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.benefits-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 10px;
+}
+
+.benefits-list {
+  display: block;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.benefits-list li {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.benefits-list li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.btn-book-aside {
+  width: 100%;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+  border: none;
+  background: var(--yellow);
+  color: #222;
+  font-weight: 700;
+}
+
+.btn-book-aside:hover {
+  background: var(--yellow-dark);
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+  padding: 40px;
+  gap: 30px;
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.avatar-large {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f0f7f0;
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.2);
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-info .name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.profile-info .certified {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f5e9;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+}
+
+.profile-info .certified::before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.profile-info .role {
+  font-size: 1.2rem;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.profile-info .reviews {
+  font-size: 1rem;
+  color: var(--light-gray);
+  margin-bottom: 20px;
+}
+
+.profile-info .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.profile-info .tag {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: var(--primary);
+}
+
+.profile-info .actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-info .btn {
+  flex: 1;
+  min-width: 200px;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+  border: none;
+}
+
+.profile-info .btn-book {
+  background: var(--yellow);
+  color: #222;
+  font-weight: 700;
+}
+
+.profile-info .btn-book:hover {
+  background: var(--yellow-dark);
+}
+
+.profile-info .btn-view {
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+}
+
+.profile-info .btn-view:hover {
+  background: var(--primary-dark);
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.bio-section,
+.experience-section,
+.specialties-section,
+.testimonials-section {
+  background: var(--bg);
+  padding: 40px;
+}
+
+.bio-section h3,
+.experience-section h3,
+.specialties-section h3,
+.testimonials-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--primary);
+  padding-bottom: 10px;
+}
+
+.bio-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.experience-section ul {
+  display: block;
+  list-style: none;
+  padding: 0;
+}
+
+.experience-section li {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 15px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.experience-section li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.specialties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.specialty {
+  background: #e8f5e9;
+  color: var(--primary);
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.testimonials-section .testimonial {
+  background: var(--light);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary);
+}
+
+.testimonials-section .testimonial p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.testimonials-section .testimonial cite {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coach-profile {
+    flex-direction: column;
+  }
+
+  .main-content-user,
+  .sidebar-user {
+    width: 100%;
+  }
+
+  .sidebar-user {
+    margin-top: 40px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .avatar-large {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-info .name {
+    font-size: 2rem;
+  }
+
+  .profile-info .actions {
+    flex-direction: column;
+  }
+
+  .profile-info .btn {
+    min-width: auto;
+  }
+
+  .specialties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-section,
+  .experience-section,
+  .specialties-section,
+  .testimonials-section,
+  .sidebar-user {
+    padding: 30px 20px;
+  }
+}

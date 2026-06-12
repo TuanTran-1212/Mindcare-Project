@@ -1,0 +1,377 @@
+:root {
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #4caf50;
+  --yellow: #ffca28;
+  --yellow-dark: #ffb300;
+  --text: #1a1a1a;
+  --gray: #555;
+  --light-gray: #777;
+  --bg: #ffffff;
+  --light: #f8f9fa;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--light);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.nav-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.btn-book {
+  background: var(--primary);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-book:hover {
+  background: var(--primary-dark);
+}
+
+.hero {
+  background: radial-gradient(circle, #e8f5e9 0%, #c8e6c9 25%, #a5d6a7 50%, #81c784 75%, #2e7d32 100%);
+  text-align: center;
+  padding: 200px 0px 80px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  color: var(--gray);
+}
+
+.process {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+
+.step {
+  max-width: 320px;
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.search-feild {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+  margin: -80px auto 80px;
+  max-width: 900px;
+}
+
+.search-form {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.search-form select,
+.search-form button {
+  padding: 14px 20px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.search-form button {
+  background: var(--primary-light);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: var(--primary);
+}
+
+.coaches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 32px;
+  margin: 60px 0;
+}
+
+.coach-card {
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-inner {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f0f7f0;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.15);
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.certified {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #e8f5e9;
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.certified::before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.role {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.reviews {
+  font-size: 0.92rem;
+  color: var(--light-gray);
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #e8f5e9;
+  color: var(--primary);
+}
+
+.description {
+  font-size: 0.97rem;
+  color: var(--gray);
+  margin-bottom: 32px;
+  flex-grow: 1;
+}
+
+.description a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.description a:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-user.btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-align: center;
+  border: none;
+}
+
+.btn-view {
+  background: var(--primary);
+  color: white;
+  border: 2px solid var(--primary);
+}
+
+.btn-view:hover {
+  background: #1b5e20;
+  color: #fff;
+}
+
+.btn-book {
+  background: var(--yellow);
+  color: #222;
+  font-weight: 700;
+}
+
+.btn-book:hover {
+  background: var(--yellow-dark);
+}
+
+.pagination {
+  text-align: center;
+  margin: 60px 0;
+  justify-content: center;
+}
+
+.pagination button {
+  padding: 10px 16px;
+  margin: 0 6px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+footer {
+  background: #111;
+  color: white;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .process {
+    gap: 40px;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .coaches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+}
+.booking{
+  background: var(--yellow);
+  border-radius: 15px;
+  margin: -140px auto 80px;
+  max-width: 400px;
+}
+.booking:hover{
+  background: var(--yellow-dark);
+}
+.booking a{
+  display: block;
+  color: white;
+  font-size: 20px;
+  padding: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}

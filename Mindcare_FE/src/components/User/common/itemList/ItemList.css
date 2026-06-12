@@ -1,0 +1,19 @@
+/* src/componets/common/GridList.css */
+
+.grid-list {
+  margin: 3rem 0;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-list {
+    grid-template-columns: 1fr !important;
+  }
+}
