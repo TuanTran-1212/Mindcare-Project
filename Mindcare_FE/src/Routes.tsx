@@ -35,6 +35,8 @@ import MyProfile from "./pages/admin/Profile/MyProfile";
 import SettingsProfile from "./pages/admin/Settings/SettingsProfile";
 import AdminLayout from "./layouts/AdminLayout";
 import RequireAuth from "./pages/Login/RequiredAuth";
+import AdminRequireAuth from "./pages/Login/AdminRequireAuth";
+import AdminLogin from "./pages/admin/AdminLogin/AdminLogin";
 import type { JSX } from "react";
 
 const protectedRoute = (path: string, element: JSX.Element) => ({
@@ -84,20 +86,24 @@ export default function Routes() {
       ],
     },
     {
+      path: "/admin",
+      element: <AdminLogin />,
+    },
+    {
       path: "/",
       element: <AdminLayout />,
       children: [
         {
           path: "dashboard",
-          element: <Dashboard />,
+          element: <AdminRequireAuth><Dashboard /></AdminRequireAuth>,
         },
         {
           path: "products",
           children: [
-            { path: "books", element: <BooksList /> },
-            { path: "books-category", element: <BooksCategory /> },
-            { path: "courses", element: <CoursesList /> },
-            { path: "courses-category", element: <CoursesCategory /> },
+            { path: "books", element: <AdminRequireAuth><BooksList /></AdminRequireAuth> },
+            { path: "books-category", element: <AdminRequireAuth><BooksCategory /></AdminRequireAuth> },
+            { path: "courses", element: <AdminRequireAuth><CoursesList /></AdminRequireAuth> },
+            { path: "courses-category", element: <AdminRequireAuth><CoursesCategory /></AdminRequireAuth> },
           ],
         },
         {
@@ -105,48 +111,48 @@ export default function Routes() {
           children: [
             {
               path: "list",
-              element: <OrdersList />,
+              element: <AdminRequireAuth><OrdersList /></AdminRequireAuth>,
             },
             {
               path: "booking",
-              element: <Booking />,
+              element: <AdminRequireAuth><Booking /></AdminRequireAuth>,
             },
           ],
         },
 
         {
           path: "customers",
-          element: <CustomerList />,
+          element: <AdminRequireAuth><CustomerList /></AdminRequireAuth>,
         },
         {
           path: "team",
-          element: <TeamList />,
+          element: <AdminRequireAuth><TeamList /></AdminRequireAuth>,
         },
         {
           path: "blog",
           children: [
             {
               path: "list",
-              element: <BlogList />,
+              element: <AdminRequireAuth><BlogList /></AdminRequireAuth>,
             },
             {
               path: "category",
-              element: <BlogCategory />,
+              element: <AdminRequireAuth><BlogCategory /></AdminRequireAuth>,
             },
           ],
         },
 
         {
           path: "reviews",
-          element: <ReviewsList />,
+          element: <AdminRequireAuth><ReviewsList /></AdminRequireAuth>,
         },
         {
           path: "profile",
-          element: <MyProfile />,
+          element: <AdminRequireAuth><MyProfile /></AdminRequireAuth>,
         },
         {
           path: "settings",
-          element: <SettingsProfile />,
+          element: <AdminRequireAuth><SettingsProfile /></AdminRequireAuth>,
         },
       ],
     },

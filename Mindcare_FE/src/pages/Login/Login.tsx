@@ -134,7 +134,7 @@ const Login = () => {
         // Điều hướng theo role
         switch (loginData.role) {
           case "admin":
-            navigate("/admin/dashboard");
+            navigate("/dashboard");
             break;
           default:
             navigate("/home");
